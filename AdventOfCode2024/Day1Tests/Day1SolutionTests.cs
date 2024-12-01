@@ -30,5 +30,25 @@ namespace Day1Tests
 
             Assert.Equal(11, result);
         }
+
+        [Fact]
+        public void Part2ExampleTest()
+        {
+            var day1Solution = new Day1Solution();
+
+            var result = day1Solution.SolvePart2(input);
+
+            Assert.Equal(31, result);
+        }
+
+        [Fact]
+        public void Part2AnswerTest()
+        {
+            var solver = new Solver();
+
+            var result = solver.SolvePart2();
+
+            Assert.Equal(11, result);
+        }
     }
 }

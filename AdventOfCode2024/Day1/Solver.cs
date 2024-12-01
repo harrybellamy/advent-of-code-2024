@@ -13,5 +13,14 @@
 
             return result;
         }
+
+        public long SolvePart2()
+        {
+            var input = fileLoader.LoadInput();
+
+            var result = solution.SolvePart2(input);
+
+            return result;
+        }
     }
 }
