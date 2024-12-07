@@ -1,6 +1,6 @@
-﻿namespace Day1
+﻿namespace Common
 {
-    internal class MultiSet<T> where T : notnull
+    public class MultiSet<T> where T : notnull
     {
         private readonly Dictionary<T, int> keyValuePairs = [];
 

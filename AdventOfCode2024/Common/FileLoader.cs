@@ -1,4 +1,4 @@
-﻿namespace Day1
+﻿namespace Common
 {
     internal class FileLoader
     {

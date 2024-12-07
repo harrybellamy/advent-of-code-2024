@@ -1,9 +1,9 @@
-﻿namespace Day1
+﻿namespace Common
 {
-    public class Solver
+    public class Solver(ISolution solution)
     {
         private readonly FileLoader fileLoader = new();
-        private readonly Day1Solution solution = new();
+        private readonly ISolution solution = solution;
 
         public long SolvePart1()
         {
