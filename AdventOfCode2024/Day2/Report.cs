@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Common;
 
 namespace Day2
 {
@@ -27,6 +23,29 @@ namespace Day2
                 if (deltas.All(x => x < 0) || deltas.All(x => x > 0))
                 {
                     return deltas.All(x => Math.Abs(x) < 4); 
+                }
+
+                return false;
+            }
+        }
+
+        public bool IsSafePart2
+        {
+            get
+            {
+                if (IsSafe)
+                {
+                    return true;
+                }
+
+                for (var indexToRemove = 0; indexToRemove < levels.Length; indexToRemove++)
+                { 
+                    var newLevels = new Report(levels.WithoutItemAtIndex(indexToRemove).ToArray());
+
+                    if (newLevels.IsSafe)
+                    {
+                        return true;
+                    }
                 }
 
                 return false;
