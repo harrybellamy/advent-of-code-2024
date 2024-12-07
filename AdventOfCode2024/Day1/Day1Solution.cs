@@ -1,6 +1,8 @@
-﻿namespace Day1
+﻿using Common;
+
+namespace Day1
 {
-    public class Day1Solution
+    public class Day1Solution : ISolution
     {
         private record InputLists(List<int> Left, List<int> Right);
 

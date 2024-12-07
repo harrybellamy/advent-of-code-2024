@@ -1,3 +1,4 @@
+using Common;
 using Day1;
 
 namespace Day1Tests
@@ -24,7 +25,8 @@ namespace Day1Tests
         [Fact]
         public void Part1AnswerTest()
         {
-            var solver = new Solver();
+            var solution = new Day1Solution();
+            var solver = new Solver(solution);
 
             var result = solver.SolvePart1();
 
@@ -44,7 +46,8 @@ namespace Day1Tests
         [Fact]
         public void Part2AnswerTest()
         {
-            var solver = new Solver();
+            var solution = new Day1Solution();
+            var solver = new Solver(solution);
 
             var result = solver.SolvePart2();
 
