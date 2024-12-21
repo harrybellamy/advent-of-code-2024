@@ -9,9 +9,9 @@ public class Day3SolutionTests
     public void Part1ExampleTest()
     {
         var input = "xmul(2,4)%&mul[3,7]!@^do_not_mul(5,5)+mul(32,64]then(mul(11,8)mul(8,5))";
-        var day1Solution = new Day3Solution();
+        var day3Solution = new Day3Solution();
 
-        var result = day1Solution.SolvePart1(input);
+        var result = day3Solution.SolvePart1(input);
 
         Assert.Equal(161, result);
     }
