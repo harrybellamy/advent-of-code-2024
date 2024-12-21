@@ -1,18 +1,18 @@
-﻿namespace Day4
+﻿namespace Common
 {
-    internal class Point
+    public class Point
     {
-        private int maxColumn;
-        private int maxRow;
+        private readonly int maxColumn;
+        private readonly int maxRow;
         private int currentColumn;
         private int currentRow;
 
         public Point(int maxColumn, int maxRow)
-        { 
+        {
             this.maxColumn = maxColumn;
             this.maxRow = maxRow;
-            this.currentColumn = 0;
-            this.currentRow = 0;
+            currentColumn = 0;
+            currentRow = 0;
         }
 
         public int Column => this.currentColumn;
@@ -30,7 +30,7 @@
         public Point Next => East.Valid ? East : NewPoint(0, currentRow + 1);
 
         private bool ExtentsCheck(int column, int row)
-        { 
+        {
             return column >= 0 && row >= 0 && column < maxColumn && row < maxRow;
         }
 
