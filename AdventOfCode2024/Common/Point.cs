@@ -43,5 +43,10 @@
             };
             return retval;
         }
+
+        public override string ToString()
+        {
+            return $"Current Column: {currentColumn}, Current Row: {currentRow}";
+        }
     }
 }
