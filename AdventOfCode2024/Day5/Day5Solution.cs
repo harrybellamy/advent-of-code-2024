@@ -62,6 +62,25 @@ public class Day5Solution : ISolution
 
     public long SolvePart2(string input)
     {
-        throw new NotImplementedException();
+        var lines = input.Split(Environment.NewLine);
+        var rules = ParseRules(lines);
+        var updates = ParseUpdates(lines);
+
+        var result = 0;
+
+        foreach (var update in updates)
+        {
+            foreach (var rule in rules)
+            {
+                if (!update.SatisfiesRule(rule))
+                {
+                    var validUpdate = update.MakeValid(rules);
+                    result += validUpdate.MiddleNumber;
+                    break;
+                }
+            }
+        }
+
+        return result;
     }
 }

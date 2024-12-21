@@ -33,5 +33,15 @@
 
             return beforeIndex < afterIndex;
         }
+
+        public Update MakeValid(IEnumerable<Rule> rules)
+        { 
+            var rulesInvolvingUpdateNumbers = rules.Where(w => values.Contains(w.Before) && values.Contains(w.After));
+            var naiveOrdering = values
+                .OrderByDescending(o => rulesInvolvingUpdateNumbers.Count(c => c.Before == o))
+                .ThenByDescending(o => rulesInvolvingUpdateNumbers.Count(c => c.After == o));
+
+            return new Update(naiveOrdering);
+        }
     }
 }
